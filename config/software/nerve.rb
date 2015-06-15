@@ -2,7 +2,7 @@ name "nerve"
 default_version "1.0.0"
 relative_path "nerve"
 
-source :git => "https://github.com/ahelal/nerve.git"
+source :git => "https://github.com/yetu/nerve.git"
 version "production"
 
 dependency "ruby"

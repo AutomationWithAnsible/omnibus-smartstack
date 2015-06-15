@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Perform necessary smartstack removal steps
+# after package is uninstalled.
+#
+
+echo "smartstack has been uninstalled!"
+
+exit 0

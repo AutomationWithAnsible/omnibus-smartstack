@@ -1,0 +1,62 @@
+---
+
+
+- name: Curl GPG install
+  shell:
+    "curl -sSL https://rvm.io/mpapis.asc | gpg --import -"
+  become: False
+  args:
+    executable: "/bin/bash"
+
+
+- name: Curl rvm GPG install
+  shell:
+    "curl -sSL https://get.rvm.io | bash -s stable"
+  become: False
+  args:
+    executable: "/bin/bash"
+
+
+- name: Curl rvm install
+  shell:
+    "curl -sSL https://get.rvm.io | bash -s stable"
+  become: False
+  args:
+    executable: "/bin/bash"
+
+
+- name: rvm reload
+  shell:
+        "   source \"$HOME/.rvm/scripts/rvm\" && rvm reload"
+  become: False
+  args:
+    executable: "/bin/bash"
+
+
+- name: rvm get head
+  shell:
+        "[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\" && rvm get head"
+  become: False
+  args:
+    executable: "/bin/bash"
+
+- name: rvm get head
+  shell:
+        "[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\" && rvm install 2.2"
+  become: False
+  args:
+    executable: "/bin/bash"
+
+- name: rvm reset
+  shell:
+        "[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\" && rvm reset"
+  become: False
+  args:
+    executable: "/bin/bash"
+
+- name: rvm use
+  shell:
+        "[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && source \"$HOME/.rvm/scripts/rvm\" && rvm use ruby-2.2.2"
+  become: False
+  args:
+    executable: "/bin/bash"

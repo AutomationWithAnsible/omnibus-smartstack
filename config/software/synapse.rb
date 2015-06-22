@@ -1,13 +1,11 @@
 name "synapse"
-default_version "1.0.0"
 relative_path "synapse"
 
 source :git => "https://github.com/getyourguide/synapse.git"
-version "production"
+default_version "production"
 
 dependency "ruby"
 dependency "rubygems"
-always_build true
 
 build do
   env = with_standard_compiler_flags(with_embedded_path)

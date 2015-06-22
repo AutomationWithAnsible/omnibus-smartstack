@@ -1,0 +1,14 @@
+---
+
+- name: centos | Instal yum dependency
+  yum:
+    name="{{ item }}"
+  with_items:
+   - ruby
+   - ruby-devel
+   - rubygems
+   - "@Development tools"
+  become: True
+
+- set_fact:
+    bundle_path: "/home/{{omnibus_user}}/bin/bundle"

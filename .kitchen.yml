@@ -10,6 +10,7 @@ provisioner         :
     name            : ansible_push
     verbose         : "vvvv"
     playbook        : "provisioner/main.yml"
+    ansible_config  : "provisioner/ansible.cfg"
 
 platforms:
   - name: ubuntu-14.04
